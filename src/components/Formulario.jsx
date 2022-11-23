@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Error from './Error'
 
 function Formulario({pacientes, setPacientes}) {
     const [nombre, setNombre] =useState("")
@@ -15,7 +16,6 @@ function Formulario({pacientes, setPacientes}) {
         //Validacion de Formulario
 
         if([nombre,propietario,email,fecha,sintomas].includes('')){
-            console.log("Hay al menos un campo vacio")
             setError(true)
         return;
         } 
@@ -48,9 +48,7 @@ function Formulario({pacientes, setPacientes}) {
                 
             <form onSubmit={handleSubmit}
             className='bg-white shadow-xl rounded-lg py-10 px-5 mb-10 ml-10 ' >
-                {error && (<div className='bg-red-800 text-center uppercase text-white p-3 mb-3 rounded font-bold'>
-                                <p>Todos los campos son obligatorios</p>
-                          </div>)}
+                {error && <Error>Todos los campos son obligatorios</Error>}
                 <div className='mb-5'>
                     <label htmlFor='mascota' className='block text-gray-700 uppercase font-bold'>
                         Nombre Mascota
