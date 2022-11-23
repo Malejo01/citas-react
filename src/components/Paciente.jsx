@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Paciente({paciente}) {
+    console.log(paciente.id)
     return (
         <div className='m-5 bg-white shadow-lg px-5 py-10 rounded-xl'>
                 <p className='font-bold mb-5 text-gray-700 uppercase'>Nombre: 
