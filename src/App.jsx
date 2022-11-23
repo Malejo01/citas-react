@@ -1,19 +1,21 @@
 import React from "react"
+import { useState } from "react"
 import Footer from "./components/Footer"
-import Form from "./components/Form"
+import Formulario from "./components/Formulario"
 import Header from "./components/Header"
 import ListadoPacientes from "./components/ListadoPacientes"
 
 
 function App() {
   
+  const[pacientes,setPacientes] =useState([])
 
   return (
     <div className="container mx-auto">
       <Header/>
       <div className="mt-12 md:flex">
-      <Form/>
-      <ListadoPacientes/>
+        <Formulario/>
+        <ListadoPacientes pacientes={pacientes} setPacientes={setPacientes}/>
       </div>
       <Footer/>
     </div>
