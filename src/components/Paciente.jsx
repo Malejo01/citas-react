@@ -19,6 +19,10 @@ function Paciente({paciente}) {
                 <p className='font-bold mb-5 text-gray-700 uppercase'>Sintomas: 
                 <span className='font-normal normal-case'>{paciente.sintomas}</span>
                 </p>
+                <div className='flex justify-end'>
+                    <button type='button' className='py-2 px-10 bg-indigo-600  hover:bg-indigo-700 uppercase text-center font-bold text-white rounded m-3'>Editar</button>
+                    <button type='button' className='py-2 px-10 bg-red-600 hover:bg-red-700 uppercase text-center font-bold text-white rounded m-3'>Eliminar</button>
+                </div>
             </div>
     )
 }
