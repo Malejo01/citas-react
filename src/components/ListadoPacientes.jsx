@@ -2,7 +2,7 @@ import React from 'react'
 import Paciente from './Paciente'
 
 
-function ListadoPacientes({pacientes, setPaciente}) {
+function ListadoPacientes({pacientes, setPaciente, eliminarPaciente}) {
 
     
 
@@ -21,7 +21,9 @@ function ListadoPacientes({pacientes, setPaciente}) {
                 <Paciente 
                     key={paciente.id} 
                     paciente={paciente}
-                    setPaciente={setPaciente}/>
+                    setPaciente={setPaciente}
+                    eliminarPaciente={eliminarPaciente}
+                />
             )
         })}
         </>

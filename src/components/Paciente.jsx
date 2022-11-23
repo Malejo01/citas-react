@@ -1,7 +1,15 @@
 import React from 'react'
 
-function Paciente({paciente, setPaciente}) {
-    console.log(paciente.id)
+function Paciente({paciente, setPaciente, eliminarPaciente}) {
+
+    const handleEliminar = () => {
+        const respuesta = confirm('¿Deseas eliminar este paciente?')
+
+        if(respuesta) {
+            eliminarPaciente(paciente.id)
+        }
+    }
+    
     return (
         <div className='m-5 bg-white shadow-lg px-5 py-10 rounded-xl'>
                 <p className='font-bold mb-5 text-gray-700 uppercase'>Nombre: 
@@ -25,6 +33,7 @@ function Paciente({paciente, setPaciente}) {
                             className='py-2 px-10 bg-indigo-600  hover:bg-indigo-700 uppercase text-center font-bold text-white rounded m-3'>
                             Editar</button>
                     <button type='button' 
+                            onClick={handleEliminar}
                             className='py-2 px-10 bg-red-600 hover:bg-red-700 uppercase text-center font-bold text-white rounded m-3'>
                             Eliminar</button>
                 </div>
