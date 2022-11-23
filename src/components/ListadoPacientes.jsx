@@ -1,7 +1,10 @@
 import React from 'react'
 import Paciente from './Paciente'
 
-function ListadoPacientes({pacientes}) {
+
+function ListadoPacientes({pacientes, setPaciente}) {
+
+    
 
     return (
         <div className='md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll'>
@@ -17,7 +20,8 @@ function ListadoPacientes({pacientes}) {
             return(
                 <Paciente 
                     key={paciente.id} 
-                    paciente={paciente}/>
+                    paciente={paciente}
+                    setPaciente={setPaciente}/>
             )
         })}
         </>
