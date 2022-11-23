@@ -122,7 +122,7 @@ function Formulario({pacientes, setPacientes, paciente, setPaciente}) {
 
                 <div className='mb-5'>
                     <label htmlFor='alta' className='block text-gray-700 uppercase font-bold'>
-                        Alta
+                        Fecha de los Sintomas
                     </label>
                     <input type="date" 
                             placeholder='Fecha de alta'
